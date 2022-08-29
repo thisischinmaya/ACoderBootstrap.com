@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>iCoder-Heaven for Programmer!</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">ACoder</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Topics
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Technology</a>
+                        <a class="dropdown-item" href="#">Web Develompent</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Support</a>
+                        <a class="dropdown-item" href="#">Write us </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact.html">Contact Us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <div class="mx-2">
+                <button type="button" class="btn btn-danger" data-toggle="modal"
+                    data-target="#LoginModal">Login</button>
+                <button type="button" class="btn btn-success" data-toggle="modal"
+                    data-target="#signupModal">SignUp</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SignUp modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Get an iCoder Account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Confirm your Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <div class="hey my-2">
+                            <h6>Select your Gender</h6>
+                            <input type="radio" name="gender" value="male"> Male<br>
+                            <input type="radio" name="gender" value="female"> Female<br>
+                            <input type="radio" name="gender" value="other"> Other
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="LoginModalLabel">Login to iCoder Account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bd-example">
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Cra3.jpg" class="d-block w-100" width="1400" height="500">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Welcome to AlexaCoder</h2>
+                        <p>Technology,Develpmpent and Intelligence </p>
+                        <a href="https://en.wikipedia.org/wiki/Technology"><button type="button"
+                                class="btn btn-danger">Technology</button></a>
+                        <a href="https://en.wikipedia.org/wiki/Development"><button type="button"
+                                class="btn btn-warning">Develompent</button></a>
+                        <a
+                            href="https://ethw.org/Category:Computational_and_artificial_intelligence?gclid=CjwKCAjwx7GYBhB7EiwA0d8oe-lvzDAsK3_NnWWgaYzZZjWpHlcbh99fcgdP5unUSodIHT7RFqCNJBoChIYQAvD_BwE"><button
+                                type="button" class="btn btn-success">Intelligence</button></a>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Cra2.jpg" class="d-block w-100" width="1400" height="500">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Explore new things</h2>
+                        <p>Technology,Develpmpent and Intelligence </p>
+                        <a href="https://en.wikipedia.org/wiki/Technology"><button type="button"
+                                class="btn btn-danger">Technology</button></a>
+                        <a href="https://en.wikipedia.org/wiki/Development"><button type="button"
+                                class="btn btn-warning">Develompent</button></a>
+                        <a
+                            href="https://ethw.org/Category:Computational_and_artificial_intelligence?gclid=CjwKCAjwx7GYBhB7EiwA0d8oe-lvzDAsK3_NnWWgaYzZZjWpHlcbh99fcgdP5unUSodIHT7RFqCNJBoChIYQAvD_BwE"><button
+                                type="button" class="btn btn-success">Intelligence</button></a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Cra1.jpg" class="d-block w-100" width="1400" height="500">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>Technology,Develpmpent and Intelligence </p>
+                        <a href="https://en.wikipedia.org/wiki/Technology"><button type="button"
+                                class="btn btn-danger">Technology</button></a>
+                        <a href="https://en.wikipedia.org/wiki/Development"><button type="button"
+                                class="btn btn-warning">Develompent</button></a>
+                        <a
+                            href="https://ethw.org/Category:Computational_and_artificial_intelligence?gclid=CjwKCAjwx7GYBhB7EiwA0d8oe-lvzDAsK3_NnWWgaYzZZjWpHlcbh99fcgdP5unUSodIHT7RFqCNJBoChIYQAvD_BwE"><button
+                                type="button" class="btn btn-success">Intelligence</button></a>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="container my-4">
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">World</strong>
+                        <h3 class="mb-0">Technology</h3>
+                        <div class="mb-1 text-muted">Mark Kennedy (Author)</div>
+                        <p class="card-text mb-auto">The advance of technology is based on making it fit in so that you
+                            don't really even notice it, so it's part of everyday life</p>
+                        <a href="#" class="stretched-link" data-toggle="modal" data-target="#Continue1Modal">Tap to know
+                            more about that
+                            <!-- Modal -->
+                            <div class="modal fade" id="Continue1Modal" tabindex="-1" role="dialog"
+                                aria-labelledby="Continue1ModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="Continue1ModalLabel">What is Technology</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h4 style="color:black"><b>Technology</b></h4>
+                                            <p style="color:black">Technology is basically a systematic way of doing
+                                                things or solving
+                                                problems for the good of mankind. Technology is also a human activity
+                                                directed at designing and making products like machines, computers,
+                                                textiles, household devices and others, which make human living
+                                                comfortable.</p>
+                                            <h4 style="color:black">Feauters</h4>
+                                            <p style="color:black">There are four primary elements for information
+                                                technology as a whole:
+                                                information security, database and network management, computer
+                                                technical support, and business software development</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="4.jpg" class="bd-placeholder-img" width="200" height="250">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Design</strong>
+                        <h3 class="mb-0">Web Design</h3>
+                        <div class="mb-1 text-muted">Bill Gates</div>
+                        <p class="mb-auto">Measuring programming progress by lines of code is like measuring aircraft
+                            building progress by weight.</p>
+                        <a href="#" class="stretched-link" data-toggle="modal" data-target="#Continue2Modal">Tap to know
+                            more about that
+                            <div class="modal fade" id="Continue2Modal" tabindex="-1" role="dialog"
+                                aria-labelledby="Continue2ModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="Continue2ModalLabel">What is Web Design</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p style="color:black">The web design process starts with a visual concept,
+                                                which you could sketch by hand or with software like Photoshop. Then,
+                                                you use HTML and CSS to build the website. HTML and CSS are the codes
+                                                for writing web pages. HTML handles the basic structure and ‘bones’ of
+                                                your page, while CSS handles the style and appearance.</p>
+                                            <h4 style="color:black">Ways to Learn Web Design</h4>
+                                            <p style="color:black">Some people might say that the only real way to learn
+                                                visual design is to teach it to yourself. Practice, get inspiration from
+                                                existing websites, practice, have people critique your designs and
+                                                practice. But remember, web design isn’t just about the visual look of a
+                                                site. Could you teach yourself accessibility? It would be a challenge,
+                                                that’s for sure.</p>
+                                            <img src="WD1.jpg" width="400" height="250"> <br>
+                                            <p style="color:black">you’re a good web designer, you’ll also pay attention
+                                                to concepts like responsive design, aesthetics, usability and
+                                                accessibility when building your site.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <div class="col-auto d-none d-lg-block">
+                            <img src="5.jpg" class="bd-placeholder-img" width="200" height="250">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Develompent</strong>
+                        <h3 class="mb-0">Android Develompent</h3>
+                        <div class="mb-1 text-muted"> Hecate Strategy</div>
+                        <p class="card-text mb-auto">An app is not all about technology
+                            It is a dream towards future</p>
+                        <a href="#" class="stretched-link" data-toggle="modal" data-target="#Continue3Modal">Tap to know
+                            More
+                            <div class="modal fade" id="Continue3Modal" tabindex="-1" role="dialog"
+                                aria-labelledby="Continue3ModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="Continue3ModalLabel">What is Android Develompent
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h3 style="color:black">What is Android</h3>
+                                            <p style="color:black">Android is an open source and Linux-based Operating
+                                                System for mobile devices such as smartphones and tablet computers.
+                                                Android was developed by the Open Handset Alliance, led by Google, and
+                                                other companies.</p>
+                                            <p style="color:black">Android offers a unified approach to application
+                                                development for mobile devices which means developers need only develop
+                                                for Android, and their applications should be able to run on different
+                                                devices powered by Android.
+                                                <img src="AD.jpg" alt="">
+                                            </p>
+                                            <h4 style="color:black">History of Android</h4>
+                                            <p style="color:black">The first beta version of the Android Software
+                                                Development Kit (SDK) was
+                                                released by Google in 2007 where as the first commercial version,
+                                                Android 1.0, was released in September 2008.</p>
+                                            <p style="color:black">On June 27, 2012, at the Google I/O conference,
+                                                Google announced the next Android version, 4.1 Jelly Bean. Jelly Bean is
+                                                an incremental update, with the primary aim of improving the user
+                                                interface, both in terms of functionality and performance.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="7.jpg" class="bd-placeholder-img" width="200" height="250">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Develompent</strong>
+                        <h3 class="mb-0">IOS Develompent</h3>
+                        <div class="mb-1 text-muted">Steve Jobs</div>
+                        <p class="mb-auto">Be a yardstick of quality. Some people aren’t used to an environment where
+                            excellence is expected</p>
+                        <a href="#" class="stretched-link" data-toggle="modal" data-target="#Continue4Modal">Tap to know
+                            more
+                            <div class="modal fade" id="Continue4Modal" tabindex="-1" role="dialog"
+                                aria-labelledby="Continue4ModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="Continue4ModalLabel">What is IOS
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h3 style="color:black">What is iOS</h3>
+                                            <p style="color:black">iOS previously known as iPhone OS is an operating
+                                                system created by Apple and released in 2007.It is written in
+                                                Swift,Objective C,C++ and some assembly code.Every year apple releases
+                                                new version of iOS in every year.Latest release in 2020 is iOS 14.</p>
+                                            <h3 style="color:black">What is iOS app development ?</h3>
+                                            <p style="color:black">iOS application development is the process of making
+                                                mobile applications for Apple hardware, including iPhone, iPad and iPod
+                                                Touch. The software is written in the Swift programming language or
+                                                Objective-C and then deployed to the App Store for users to download.
+                                            </p>
+                                            <p style="color:black">For iOS development the programming language used is
+                                                Swift or Objective C.Before 2014 Objective C was primary language for
+                                                iOS development which is not much beginner friendly.So in order to make
+                                                more people to get into iOS development Apple introduced a whole new
+                                                language called Swift in WWDC(World Wide Developer Conference) in
+                                                2014.Swift is a cute language which combines the simple TypeScript like
+                                                syntax of with performance of C++ to give a language which is simple
+                                                like Python but at the same time blazing fast like C++.</p>
+                                            <img src="ID.jpg" height="400" width="450">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <div class="col-auto d-none d-lg-block">
+                            <img src="6.jpg" class="bd-placeholder-img" width="200" height="250">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my -6">
+        <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 690px;">
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
+                <div class="card">
+                    <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">
+                        <img src="AI2.jpg" alt="" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
+                            role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice"
+                            focusable="false">
+                    </a>
+
+                    <div class="card-body" style=background-color:powderblue;>
+                        <h4 class="card-title" style="color:black">Artificial Intelligence</h4>
+                        <p class="card-text">Artificial intelligence is the simulation of human intelligence processes
+                            by machines, especially computer systems.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3323%; top: 0px;">
+                <div class="card p-3" style=background-color:powderblue;>
+                    <figure class="p-3 mb-0">
+                        <blockquote class="blockquote">
+                            <p style="font-family: Bradley Hand ITC; font-weight: bold;">I visualise a time when we will
+                                be to robots what dogs are to humans, and I’m rooting for
+                                the machines..</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-muted">
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 66.6647%; top: 0px;">
+                <div class="card">
+                    <a href="https://en.wikipedia.org/wiki/Machine_learning">
+                        <img src="CS2.jpg" alt="" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
+                            role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice"
+                            focusable="false">
+
+                    </a>
+                    <div class="card-body" style=background-color:powderblue>
+                        <h4 class="card-title">Machine Learning</h4>
+                        <p class="card-text">ML is a branch of (AI) & computer
+                            science which focuses on the use of data and algorithms to imitate the way that humans
+                            learn, gradually improving its accuracy.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3323%; top: 171px;">
+                <div class="card text-bg-primary text-center p-3">
+                    <figure class="mb-0">
+                        <blockquote class="blockquote">
+                            <p style="font-family: Tempus Sans ITC; font-weight: bold;">So, How would you weigh in?
+                                What’s your opinion about artificial intelligence?</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-white">
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3323%; top: 310px;">
+                <div class="card text-center">
+                    <div class="card-body" style="background-color: rgb(201, 243, 97);">
+                        <h5 class="card-title">Thank You</h5>
+                        <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 362px;">
+                <div class="card">
+                    <img src="AI3.jpg" alt="" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice"
+                        focusable="false"></IMG>
+
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 66.6647%; top: 378px;">
+                <div class="card p-3 text-end" ;>
+                    <figure class="mb-0">
+                        <blockquote class="blockquote my-4">
+                            <p style="font-family: Tempus Sans ITC; font-weight: bold ;"><b>A baby learns to crawl, walk
+                                    and then run. We are in the crawling stage when it comes
+                                    to
+                                    applying machine learning.</b></p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-muted">
+                             <cite title="Source Title"><b>Dave Waters</b></cite>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3323%; top: 488px;">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">AI (vs) ML</h5>
+                        <p style="font-family: Tempus Sans ITC; font-weight: 700;">An “intelligent” computer uses AI to
+                            think like a human and perform tasks
+                            on its own. Machine learning is how a computer system develops its intelligence.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="container my-4">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>© 2017-2019 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
